@@ -1,3 +1,10 @@
+This is my Capstone Project. Built by Aaron Donaldson as a student at Bottega Tech. Lehi, Ut. It is a safety incident tracker app that will interact with an API to store an incident record. It will incorporate full CRUD functionality and will require the associated API
+
+# TODO add link to Safety-tracker-api and git.hub link.
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

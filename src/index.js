@@ -1,17 +1,51 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+class App extends React.Component {
+  constructor(){
+    super();
+  
+  }
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+  render() {
+    return(
+      <div className="app">
+        <div className="home-page-container">
+          <div className="logo-container">
+            <div className="logo-text-wrapper">
+              Hello from logo text wrapper
+            </div>
+            <div className="logo-image-wrapper">
+              <p>logo icon goes here</p>
+              <p>logo image goes here</p>
+            </div>
+          </div>
+          <div className="userinfo-container">
+            <div className="date-wrapper">
+              date component renders here
+            </div>
+            <div className="login-msg-wrapper">
+              login msg component renders here
+            </div>
+            <div className="login-btn-wrapper">
+              <button className="btn">Login</button>
+              <button className="btn">Report an Incident</button>
+            </div>
+          </div>
+          <div className="emerg-msg-container">
+            <div className="emerg-icon">Icon goes here</div>
+            <div className="emerg-msg-wrapper">
+                <p>If this is an emergency, please dial <button className="btn">911</button></p>
+            </div>
+            <div className="emerg-icon">Icon goes here</div>
+          </div>
+        </div>
+  
+      </div>
+    )
+  }
+}
+
+
+
+ReactDOM.render( <App />, document.getElementById('root'));

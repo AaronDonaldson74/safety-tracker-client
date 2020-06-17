@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Form from './components/forms/form';
 
 class App extends React.Component {
   constructor(){
@@ -39,6 +40,9 @@ class App extends React.Component {
             </div>
             <div className="emerg-icon">Icon goes here</div>
           </div>
+        </div>
+        <div className="Form">
+          <Form />
         </div>
   
       </div>

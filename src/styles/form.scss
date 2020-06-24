@@ -1,0 +1,46 @@
+.form-container {
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 10px;
+    max-width: 850px;
+    background-color: #f1E500;
+    filter: drop-shadow(.75em .75em .5em);
+
+    .form-wrapper{
+        width: 80%vw;
+        
+        .form-field-wrapper {
+            padding: 4px;
+            width: 100%;
+            
+            .form-field {
+                color: rgb(51, 49, 49);
+                font-family: 'Krona One', sans-serif;
+                padding: 10px 20px;
+                border-radius: 5px;
+                border: 2px solid grey;
+                width: 90%;
+                
+            }
+
+            .form-text-field {
+                color: rgb(51, 49, 49);
+                font-family: 'Krona One', sans-serif;
+                padding: 10px 20px;
+                border-radius: 5px;
+                border: 2px solid grey;
+                height: 400px;
+                width: 90%;
+            }
+
+        }
+
+        .form-btn {
+            color: rgb(51, 49, 49);
+            font-family: 'Krona One', sans-serif;
+            padding: 4px;
+            border-radius: 5px;
+        }
+    }
+}

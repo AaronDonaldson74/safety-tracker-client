@@ -1,0 +1,27 @@
+.nav-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.nav-link-wrapper{
+    height: 150px;
+    display: flex;
+    width: 850px;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.nav-btn {
+    font-family: 'Krona One', sans-serif;
+    background-color: grey;
+    border-radius: 5px;
+    height: 100px;
+    width: 150px;
+    color: black;
+    filter: drop-shadow(.75em .75em .5em);
+
+    a {
+        color: rgb(51, 49, 49);
+        text-decoration: none;
+    }
+}

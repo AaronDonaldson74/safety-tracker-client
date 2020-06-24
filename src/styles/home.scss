@@ -1,0 +1,49 @@
+
+
+.home-page-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        color: #F3ECC8;
+        background-color: black;
+
+        .logo-container {
+            display: flex;
+            justify-content: initial;
+            max-width: 400px;
+            height: 150px;
+
+            .logo-image-wrapper{
+                max-width: 400px;
+            }
+
+            .logo-image-wrapper img {
+                height: 100%;
+            }
+
+            .logo-text-wrapper{
+               height: 100%;
+            }
+        
+        }
+
+        .userinfo-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+    }
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

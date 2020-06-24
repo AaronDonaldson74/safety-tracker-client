@@ -1,0 +1,37 @@
+.registration-container{
+    color:rgb(51, 49, 49);
+    background-color: rgb(91, 145, 189);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 550px;
+    border: 2px solid black;
+    border-radius: 5px;
+    filter: drop-shadow(.75em .75em .5em);
+    padding: 10px;
+}
+
+.input-field {
+    color: rgb(51, 49, 49);
+    font-family: 'Krona One', sans-serif;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid grey;
+    width: 90%;
+}
+
+.drop-field{
+    color: rgb(51, 49, 49);
+    font-family: 'Krona One', sans-serif;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid grey;
+}
+
+.form-btn {
+    color: rgb(51, 49, 49);
+    font-family: 'Krona One', sans-serif;
+    padding: 4px;
+    border-radius: 5px;
+}

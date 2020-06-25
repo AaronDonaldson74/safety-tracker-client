@@ -15,16 +15,19 @@ export default class Home extends Component {
 
         this.state = {
             loggedInStatus: "NOT_LOGGED_IN",
-            user_name: ""
+            user_name: "",
+            user_id: ""
         }
         this.handleLoggedInStatus = this.handleLoggedInStatus.bind(this)
         this.handleLoginMessage = this.handleLoginMessage.bind(this)
     }
 
-    handleSuccessfulLogin = (user_name) => {
+    handleSuccessfulLogin = (user_name, user_id) => {
          this.setState({
              loggedInStatus: "LOGGED_IN",
-             user_name: user_name
+             user_name: user_name,
+             user_id: user_id
+
 
          })
     }
@@ -36,13 +39,21 @@ export default class Home extends Component {
                     <NavigationContainer 
                     />
                     <Switch>
-                        <Route path="/safety-tracker" component={SafetyTracker} />
+                        <Route
+                            path="/safety-tracker"
+                            render={props => (
+                                <SafetyTracker
+                                    {...props}
+                                    author={this.state.user_id}
+                                />
+                            )}
+                        />
                         <Route path="/registration" component={NewUserRegistration} />
                         <Route path="/all-incident-forms" component={ShowIncidentReports} />
                     </Switch>
                 </Router> 
         )} else {
-            return <Login handleSuccessfulLogin={this.handleSuccessfulLogin}/>
+            return <Login handleSuccessfulLogin={this.handleSuccessfulLogin} name="Aaron"/>
         }
     }
 

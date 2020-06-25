@@ -4,6 +4,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
 class SafetyTracker extends Component {
+    constructor(props) {
+        super(props)
+    }
 
     render() {
         return(
@@ -21,7 +24,7 @@ class SafetyTracker extends Component {
                     </div>
                 </div>
                 <div className="Form">
-                    <Form />
+                    <Form author={this.props.author}/>
                 </div>
         </div>
         )

@@ -25,7 +25,8 @@ export default class NewUserRegistration extends Component {
     handleSubmit(event) {
         axios({
             method: 'post',
-            url: "http://localhost:5000/user/register",
+            url: "https://lifeboat-safety-tracker-api.herokuapp.com/user/register",
+            // url: "http://localhost:5000/user/register",
             data: {
                 user_name: this.state.user_name,
                 password: this.state.password,

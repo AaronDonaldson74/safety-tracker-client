@@ -21,7 +21,8 @@ export default class Login extends Component {
         event.preventDefault()
         axios({
             method: 'post',
-            url: "http://localhost:5000/user/login",
+            url: "https://lifeboat-safety-tracker-api.herokuapp.com/user/login",
+            // url: "http://localhost:5000/user/login",
             data: {
                 user_name: this.state.user_name,
                 password: this.state.password
@@ -31,7 +32,7 @@ export default class Login extends Component {
             // User Verified
             console.log(response)
             if (response.data.message === 'User Verified') {
-                this.props.handleSuccessfulLogin(response.data.userInfo.user_name)
+                this.props.handleSuccessfulLogin(response.data.userInfo.user_name, response.data.userInfo.id)
             }
         }).catch(error => {
             console.log("error", error)

@@ -20,7 +20,8 @@ export default class ShowIncidentReports extends Component {
     }
 
     componentDidMount() {
-        fetch('http://localhost:5000/incidentForms')
+        fetch('https://lifeboat-safety-tracker-api.herokuapp.com/incidentForms')
+        // fetch('http://localhost:5000/incidentForms')
         .then(response => response.json())
         .then((data) => {
             this.setState({incidentReports: data})

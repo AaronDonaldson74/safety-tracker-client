@@ -1,16 +1,18 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import axios from 'axios';
+import { withRouter } from "react-router";
 
-export default function Form() {
+function Form(props) {
   const { register, handleSubmit } = useForm();
   const onSubmit = data => {
     console.log(data)
     axios({
       method: 'post',
-      url: "http://localhost:5000/incidentForm",
+      url: "https://lifeboat-safety-tracker-api.herokuapp.com/incidentForm",
+      // url: "http://localhost:5000/incidentForm",
       data: {
-        "author": data.author,
+        "author": props.author,
         "ppe": data.ppe ,
         "conditions": data.conditions,
         "equipment": data.equipment,
@@ -20,6 +22,8 @@ export default function Form() {
       }
     }).then(res => {
       console.log(res)
+      props.history.push("/all-incident-forms")
+    
     }).catch(err =>{
       console.log("submit error", err)
     })
@@ -56,3 +60,4 @@ export default function Form() {
     </div>
   );
 }
+export default withRouter(Form)
